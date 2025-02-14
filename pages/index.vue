@@ -32,6 +32,11 @@
         </UCard>
       </div>
     </section>
+
+    <section class="p-8 text-center">
+        <h2 class="text-3xl font-bold">Jaarkalender</h2>
+
+    </section>
   </div>
 </template>
 
@@ -39,24 +44,24 @@
 const events = [
   {
     id: 1,
-    title: "Outdoor Adventure Camp",
-    date: "March 15, 2025",
-    location: "Evergreen Forest",
-    description: "A weekend full of outdoor activities, hiking, and teamwork!",
+    title: "Stoofvleesavond",
+    date: "15 Maart, 2025",
+    location: "Lecca",
+    description: "Kom lekker stoofvlees of vegetarische lasagne eten op onze jaarlijkse stoofvleesavond.",
   },
   {
     id: 2,
-    title: "Leadership Workshop",
-    date: "April 5, 2025",
-    location: "City Youth Center",
-    description: "Develop your leadership skills with expert mentors.",
+    title: "Sloeber Speelclub Rakwi weekend",
+    date: "17-19 April, 2025",
+    location: "nog een verrassing",
+    description: "we gaan naar jaarlijkse gewoonte op een spetterend weekend met de jongsten",
   },
   {
     id: 3,
-    title: "Spring Festival",
-    date: "April 20, 2025",
-    location: "Main Square",
-    description: "Celebrate the season with music, games, and fun activities.",
+    title: "Zomercafé",   
+    date: "11-12 Juli, 2025",
+    location: "Laagvlaktestraat",
+    description: "Kom met ons de zomer vieren op ons jaarlijkse mini-festival.",
   },
 ];
 
