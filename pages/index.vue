@@ -15,27 +15,24 @@
     <!-- Content Below -->
     <section class="p-8 text-center">
       <h2 class="text-3xl font-bold">Aankomende evenementen</h2>
-      <div class="flex justify-around">
-        <UCard v-for="event in events" :key="event.id" class="p-4 bg-white">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <UCard v-for="event in events" :key="event.id" class="p-4 bg-grey">
           <template #header>
-            <h3 class="text-lg font-bold">{{ event.title }}</h3>
+            <h3 class="text-lg font-bold whitespace-nowrap overflow-hidden text-ellipsis">{{ event.title }}</h3>
+            <p class="text-sm text-gray-600">
+              {{ event.date }} | {{ event.location }}
+            </p>
           </template>
-          <p class="text-sm text-gray-600">
-            {{ event.date }} | {{ event.location }}
-          </p>
-          <p class="mt-2">{{ event.description }}</p>
+          <img :src="event.picture" alt="">
           <template #footer>
-            <UButton color="primary" @click="register(event.id)"
-              >Join Now</UButton
-            >
+            <p class="mt-2">{{ event.description }}</p>
           </template>
         </UCard>
       </div>
     </section>
 
     <section class="p-8 text-center">
-        <h2 class="text-3xl font-bold">Jaarkalender</h2>
-
+      <h2 class="text-3xl font-bold">Jaarkalender</h2>
     </section>
   </div>
 </template>
@@ -47,20 +44,33 @@ const events = [
     title: "Stoofvleesavond",
     date: "15 Maart, 2025",
     location: "Lecca",
-    description: "Kom lekker stoofvlees of vegetarische lasagne eten op onze jaarlijkse stoofvleesavond.",
+    picture: '/groepsfoto.jpg',
+    description:
+      "Kom lekker stoofvlees of vegetarische lasagne eten op onze jaarlijkse stoofvleesavond.",
   },
   {
     id: 2,
     title: "Sloeber Speelclub Rakwi weekend",
     date: "17-19 April, 2025",
     location: "nog een verrassing",
-    description: "we gaan naar jaarlijkse gewoonte op een spetterend weekend met de jongsten",
+    picture: '/groepsfoto.jpg',
+    description:
+      "we gaan naar jaarlijkse gewoonte op een spetterend weekend met de jongsten",
   },
   {
     id: 3,
-    title: "Zomercafé",   
+    title: "Zomercafé",
     date: "11-12 Juli, 2025",
     location: "Laagvlaktestraat",
+    picture: '/groepsfoto.jpg', 
+    description: "Kom met ons de zomer vieren op ons jaarlijkse mini-festival.",
+  },
+  {
+    id: 4,
+    title: "Chirokamp",
+    date: "11-19 Augustus, 2025",
+    location: "Laagvlaktestraat",
+    picture: '/groepsfoto.jpg', 
     description: "Kom met ons de zomer vieren op ons jaarlijkse mini-festival.",
   },
 ];
