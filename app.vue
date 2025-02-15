@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <NuxtLayout />  <!-- This renders the actual page content -->
+    <NuxtLayout />  <!-- This renders the actual page content -->'
+    <Analytics />
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 export default {
   name: 'App'
 };
+import { Analytics } from '@vercel/analytics/next';
 </script>
 
 <style>
