@@ -23,7 +23,7 @@
               {{ event.date }} | {{ event.location }}
             </p>
           </template>
-          <img :src="event.picture" alt="">
+          <img :src="event.picture" alt="Event Image" class="h-60 w-full object-cover">
           <template #footer>
             <p class="mt-2">{{ event.description }}</p>
           </template>
@@ -44,7 +44,7 @@ const events = [
     title: "Stoofvleesavond",
     date: "15 Maart, 2025",
     location: "Lecca",
-    picture: '/groepsfoto.jpg',
+    picture: '/stoofvleesavond.png',
     description:
       "Kom lekker stoofvlees of vegetarische lasagne eten op onze jaarlijkse stoofvleesavond.",
   },
@@ -52,8 +52,8 @@ const events = [
     id: 2,
     title: "Sloeber Speelclub Rakwi weekend",
     date: "17-19 April, 2025",
-    location: "nog een verrassing",
-    picture: '/groepsfoto.jpg',
+    location: "verrassing",
+    picture: '/weekend.png',
     description:
       "we gaan naar jaarlijkse gewoonte op een spetterend weekend met de jongsten",
   },
@@ -62,16 +62,16 @@ const events = [
     title: "Zomercafé",
     date: "11-12 Juli, 2025",
     location: "Laagvlaktestraat",
-    picture: '/groepsfoto.jpg', 
+    picture: '/zomercafe.png', 
     description: "Kom met ons de zomer vieren op ons jaarlijkse mini-festival.",
   },
   {
     id: 4,
     title: "Chirokamp",
     date: "11-19 Augustus, 2025",
-    location: "Laagvlaktestraat",
-    picture: '/groepsfoto.jpg', 
-    description: "Kom met ons de zomer vieren op ons jaarlijkse mini-festival.",
+    location: "verrassing",
+    picture: '/logo.jpg', 
+    description: "Ons jaarlijkse groot kamp",
   },
 ];
 
