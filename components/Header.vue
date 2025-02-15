@@ -2,8 +2,8 @@
     <header class="header bg-gray-100 p-2">
         <nav class="flex text-white items-center justify-around">
             <!-- Logo on the Left -->
-            <div>
-                <img src="/assets/logo.jpg" alt="Profile" class="w-20 h-20 rounded-full" />
+            <div class="hidden md:block">
+                <img src="/assets/logo.jpg" alt="Profile" class="w-16 h-16 md:w-20 md:h-20 rounded-full" />
             </div>
 
             <!-- Centered Navigation Links -->
@@ -19,7 +19,7 @@
                 </li>
             </ul>
 
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 hidden md:block">
                 <a href="https://www.facebook.com/chiro.regenboog.leke" target="_blank" aria-label="Facebook">
                     <i class="fab text-2xl fa-facebook w-8  text-white hover:text-blue-600"></i>
                 </a>
