@@ -4,24 +4,24 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <NuxtLink
-        v-for="movement in movements"
-        :key="movement.name"
-        :to="`groups/${movement.id}`"
+        v-for="group in groups"
+        :key="group.id"
+        :to="`groups/${group.id}`"
         class="block"
       >
         <UCard class="transition-transform hover:scale-105">
           <template #header>
             <div class="flex justify-center p-4">
               <img
-                :src="movement.logo"
-                :alt="`${movement.name} logo`"
+                :src="group.image"
+                :alt="`${group.name} logo`"
                 class="w-36 h-36 object-contain"
               />
             </div>
           </template>
 
           <div class="text-center">
-            <h2 class="text-xl font-semibold">{{ movement.name }}</h2>
+            <h2 class="text-xl font-semibold">{{ group.name }}</h2>
           </div>
         </UCard>
       </NuxtLink>
@@ -30,33 +30,21 @@
 </template>
 
 <script setup>
-const movements = [
-  {
-    id: 1,
-    name: "Sloebers",
-    logo: "/sloebers.png",
-  },
-  {
-    id: 2,
-    name: "Speelclubs",
-    logo: "/speelclubs.png",
-  },
-  {
-    id: 3,
-    name: "Rakwi's",
-    logo: "/rakwis.png",
-  },
-  {
-    id: 4,
-    name: "Tito's",
-    logo: "/titos.png",
-  },
-  {
-    id: 5,
-    name: "Keti's",
-    logo: "/ketis.png",
-  },
-];
+import { createClient } from '@supabase/supabase-js';
+const runtimeConfig = useRuntimeConfig()
+const supabase_key = runtimeConfig.supabaseKeyConst
+const supabase = createClient('https://egsybqrixwlpmcfwbbke.supabase.co', supabase_key)
+const groups = ref([])
+
+async function getgroups() {
+  const { data } = await supabase.from('Group').select()
+  console.log(supabase_key)
+  groups.value = data
+}
+
+onMounted(() => {
+  getgroups()
+})
 </script>
 
 <style scoped>

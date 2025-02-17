@@ -3,7 +3,7 @@
     <!-- Fullscreen Background Image -->
     <div
       class="bg-cover bg-center bg-no-repeat h-[calc(100vh-80px)]"
-      :style="{ backgroundImage: `url(${'/groepsfoto.jpg'})` }"
+      :style="{ backgroundImage: `url(${'https://egsybqrixwlpmcfwbbke.supabase.co/storage/v1/object/public/chiroleke//groepsfoto.jpg'})` }"
     >
       <div class="flex items-center justify-center h-full bg-black/40">
         <h1 class="text-white text-5xl font-bold">

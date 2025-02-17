@@ -1,21 +1,29 @@
 <template>
   <div class="min-h-screen p-8 bg-gray-50">
-    <h1 class="text-3xl font-bold text-center mb-12">{{ getPageText() }}</h1>
+    <h1 class="text-3xl font-bold text-center mb-12">{{ group.name }}</h1>
+    <img
+                :src="group.image"
+                :alt="`logo`"
+                class="w-36 h-36 object-contain flex items-c justify-center"
+              />
+              <h2 class="text-center">{{ group.description }}</h2>
   </div>
 </template>
 
 <script setup>
 const route = useRoute();
 
-const getPageText = () => {
-  const names = {
-    1: "sloebers",
-    2: "speelclubs",
-    3: "rakwi's",
-    4: "tito's",
-    5: "speelclubs",
-  };
+import { createClient } from '@supabase/supabase-js';
+const supabase_key = process.env.NUXT_SUPABASE_KEY_CONST
+const supabase = createClient('https://egsybqrixwlpmcfwbbke.supabase.co', supabase_key)
+const group = ref([])
 
-  return `Hier komt de pagina van de ${names[route.params.id] || "onbekend"}`;
-};
+async function getgroups() {
+  const { data } = await supabase.from('Group').select().eq('id', route.params.id).single()
+  group.value = data
+}
+
+onMounted(() => {
+  getgroups()
+})
 </script>
