@@ -32,7 +32,7 @@
 <script setup>
 import { createClient } from '@supabase/supabase-js';
 const runtimeConfig = useRuntimeConfig()
-const supabase_key = runtimeConfig.supabaseKeyConst
+const supabase_key = runtimeConfig.public.supabaseKeyConst
 const supabase = createClient('https://egsybqrixwlpmcfwbbke.supabase.co', supabase_key)
 const groups = ref([])
 

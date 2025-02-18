@@ -14,7 +14,8 @@
 const route = useRoute();
 
 import { createClient } from '@supabase/supabase-js';
-const supabase_key = process.env.NUXT_SUPABASE_KEY_CONST
+const runtimeConfig = useRuntimeConfig()
+const supabase_key = runtimeConfig.public.supabaseKeyConst
 const supabase = createClient('https://egsybqrixwlpmcfwbbke.supabase.co', supabase_key)
 const group = ref([])
 
