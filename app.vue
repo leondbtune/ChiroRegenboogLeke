@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <NuxtLoadingIndicator />
     <NuxtLayout />  <!-- This renders the actual page content -->
   </div>
 </template>
