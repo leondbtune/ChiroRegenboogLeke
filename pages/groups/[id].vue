@@ -8,7 +8,7 @@
 
     <!-- Leaders Section -->
     <div class="mt-12">
-      <h2 v-if="leaders" class="text-2xl font-semibold text-center mb-6">Leaders</h2>
+      <h2 v-if="leaders" class="text-2xl font-semibold text-center mb-6">Leiding</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <UCard v-for="leader in leaders" :key="leader.id" class="p-6 flex flex-col items-center text-center">
           <!-- Custom Circular Image (Centered) -->
