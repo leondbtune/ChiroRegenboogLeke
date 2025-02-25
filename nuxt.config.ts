@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     'cache': true
   },
   routeRules: {
-    '/groups/**': {
+    '/groups': {
       cache: {
         maxAge: 60 * 60
       }
