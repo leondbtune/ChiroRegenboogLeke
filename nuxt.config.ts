@@ -17,8 +17,7 @@ export default defineNuxtConfig({
     '/': {
       cache: {
         maxAge: 60 * 60
-      },
-      prerender: true
+      }
     },
     '/groups': {
       cache: {
@@ -28,26 +27,22 @@ export default defineNuxtConfig({
     '/photos': {
       cache: {
         maxAge: 60 * 60
-      },
-      prerender: true
+      }
     },
     '/blog': {
       cache: {
         maxAge: 60 * 60
-      },
-      prerender: true
+      }
     },
     '/groups/**': {
       cache: {
         maxAge: 60 * 60
-      },
-      prerender: true
+      }
     },
     '/photos/**': {
       cache: {
         maxAge: 60 * 60
-      },
-      prerender: true
+      }
     },
   }
 })
