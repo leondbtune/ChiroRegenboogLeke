@@ -14,10 +14,35 @@ export default defineNuxtConfig({
     'cache': true
   },
   routeRules: {
+    '/': {
+      cache: {
+        maxAge: 60 * 60
+      }
+    },
     '/groups': {
       cache: {
         maxAge: 60 * 60
       }
-    }
+    },
+    '/photos': {
+      cache: {
+        maxAge: 60 * 60
+      }
+    },
+    '/blog': {
+      cache: {
+        maxAge: 60 * 60
+      }
+    },
+    '/groups/**': {
+      cache: {
+        maxAge: 60 * 60
+      }
+    },
+    '/photos/**': {
+      cache: {
+        maxAge: 60 * 60
+      }
+    },
   }
 })
